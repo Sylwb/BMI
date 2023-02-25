@@ -1,6 +1,7 @@
 from operations import CalculatorBMI
 from tqdm import tqdm
 import time
+import sys
 
 print("*** Welcome the the BMI Calculator by Sylwester Bogusz ***\n")
 
@@ -12,7 +13,7 @@ try:
     height = float(height)
 except ValueError:
     print("Wrong datatype entered.")
-    exit()
+    sys.exit()
 
 print("\nLoading...\n")
 for i in tqdm(range(100), bar_format="{desc}{percentage:3.0f}%|{bar}| \033[34m{elapsed}\033[0m"):
